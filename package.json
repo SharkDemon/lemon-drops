@@ -4,6 +4,7 @@
   "description": "Clipboard manager built using Electron.",
   "main": "./app/main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rory Dickinson",
