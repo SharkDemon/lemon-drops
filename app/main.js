@@ -6,9 +6,13 @@ const { app, Menu, Tray } = require('electron');
 let tray = null;
 
 app.on('ready', () => {
+
+    // hides the dock icon if running on MacOS
+    if (app.dock) app.dock.hide();
+
     tray = new Tray(path.join(__dirname, '/Icon.png'));
 
-    // on Windows, register click event listener to open menu
+    // if Windows, register click event listener to open menu
     if (process.platform === 'win32') {
         tray.on('click', tray.popUpContextMenu);
     }
