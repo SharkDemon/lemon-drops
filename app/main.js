@@ -35,6 +35,8 @@ const updateMenu = () => {
             click() { null; }
         },
         { type: 'separator' },
+        // map through the array of clippings and render them
+        // as simple menu items
         ...clippings.map( (clipping, index) => ({ label: clipping })),
         { type: 'separator' },
         {
